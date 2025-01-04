@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 33, 33, 33;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 241, 245, 249;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 248, 250, 252;
+    --background-start-rgb: 15, 23, 42;
+    --background-end-rgb: 30, 41, 59;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: var(--font-poppins), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-merriweather), serif;
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-4 py-2 rounded-md font-semibold text-white transition duration-300;
+  }
+}
+
+@layer utilities {
+  .gradient-bg-1 {
+    @apply bg-gradient-to-r from-purple-400 via-pink-500 to-red-500;
+  }
+  .gradient-bg-2 {
+    @apply bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600;
+  }
+  .gradient-bg-3 {
+    @apply bg-gradient-to-r from-green-300 via-yellow-300 to-pink-300;
+  }
+  .gradient-text {
+    @apply text-transparent bg-clip-text;
+  }
+}
+
