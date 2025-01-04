@@ -54,7 +54,7 @@ export default function HeroSection() {
         <div className="relative w-64 h-64 mx-auto">
           <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 rounded-full animate-spin-slow"></div>
           <Image
-            src="/images/pic5.jpg"
+            src="/images/pic5.JPG"
             alt="Profile picture"
             width={249}
             height={280}
